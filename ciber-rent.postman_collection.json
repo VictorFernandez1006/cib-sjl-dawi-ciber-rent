@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "7459d95b-203f-4849-9c52-8c76a2d1df96",
+		"name": "ciber-rent",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13734326"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9090/api/vehiculo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX0FETUlOIl0sInN1YiI6ImFkbWluIiwiaWF0IjoxNzU0NzQ5ODkwLCJleHAiOjE3NTQ3NTAwNzB9.6vDqe9nQ8n1k1sQCm5zQ2XI6Tn7d0UdgDUg6FDaptjA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"placa\": \"BHV234\",\r\n    \"modelo\": \"Glory\",\r\n    \"tarifaDiaria\": 12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9090/api/vehiculo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/vehiculo/2/estado",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"estadoVehiculo\": \"DISPONIBLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9090/api/vehiculo/2/estado"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/reserva",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fechaInicio\": \"2025-08-09\",\r\n    \"fechaFin\": \"2025-08-10\",\r\n    \"dni\": \"75823025\",\r\n    \"placa\": \"BHV234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9090/api/reserva"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/reserva/2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fechaInicio\": \"2025-08-09\",\r\n    \"fechaFin\": \"2025-08-10\",\r\n    \"dni\": \"75823025\",\r\n    \"placa\": \"BWJ512\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9090/api/reserva/2"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/reserva",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fechaInicio\": \"2025-08-09\",\r\n    \"fechaFin\": \"2025-08-10\",\r\n    \"dni\": \"75823025\",\r\n    \"placa\": \"BWJ512\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9090/api/reserva"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/reserva/2/estado",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"estadoReserva\": \"CANCELADA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9090/api/reserva/2/estado"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/auth/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9090/api/auth/login"
+			},
+			"response": []
+		}
+	]
+}
